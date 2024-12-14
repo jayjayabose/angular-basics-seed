@@ -1,38 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   template: `
-    <div class="app">
-      <h1>{{ newMessage }}</h1>
-      <pre>
-        newMessage value is updated by input1 and by input 2
-      </pre>
-      
-      <h1>{{ message.length < 10 ? 'short' : 'long' }}</h1>
-      <h1 [innerText]="message.length < 10 ? 'short' : 'long'"></h1>
-
-      <dl>
-        <dt>
-          <label>
-            Input 1: handleInput method
-            <input [value]="message" (input)="handleInput($event)">
-          </label>
-        </dt>
-        <dt>
-          <label>
-            Input 2: template reference variable
-            <input [value]="message" (input)="this.newMessage = messageInput.value" #messageInput>
-          </label>
-        </dt>
-      </dl>
-
-      <button (click)="handleReset()">reset</button>
-      <p>Message input (data down does not change): {{ messageInput.value }}</p>
-
-      <h1>headerValue: {{ headerValue.value }}</h1>
-      <input type="text" #headerValue>
-    </div> 
+    <app-donut-list></app-donut-list>
   `,
   styles: [
     `
