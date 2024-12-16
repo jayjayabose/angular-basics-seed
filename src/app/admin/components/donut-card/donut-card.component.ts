@@ -6,7 +6,10 @@ import { Donut } from '../../models/donut.model';
   template: `
     <div 
       class="donut-card"
-      [class.donut-card-promo]="donut.promo"
+      [ngClass]="{
+        'donut-card-promo': donut.promo,
+        'donut-card-new': true
+      }"
       >
       <img
       src="/assets/img/{{donut.icon}}.svg"
@@ -15,7 +18,7 @@ import { Donut } from '../../models/donut.model';
       
       >
       <p class="donut-card-name">{{ donut.name }}</p>
-      <p class="donut-card-price">{{ donut.price }}</p>  
+      <p class="donut-card-price">{{ donut.price / 100 | currency: 'USD' : 'symbol'}}</p>  
     </div>
   `,
   styles: [
@@ -43,7 +46,6 @@ import { Donut } from '../../models/donut.model';
           margin-right: 10px;
         }
         &-promo {
-          // background-color: #f9f9f9;
           border: 2px solid #eee;
         }
       }
