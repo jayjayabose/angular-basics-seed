@@ -2,16 +2,15 @@ import { Component } from '@angular/core';
 import { Donut } from '../../models/donut.model';
 
 @Component({
-  selector: 'app-donut-list',
+  selector: 'donut-list',
   template: `
     <div>
-      <app-donut-card [donut]="donuts[0]"></app-donut-card>
-      <app-donut-card [donut]="donuts[1]"></app-donut-card>
-      <app-donut-card [donut]="donuts[2]"></app-donut-card>
+      <donut-card [donut]="donuts[0]"></donut-card>
+      <donut-card [donut]="donuts[1]"></donut-card>
+      <donut-card [donut]="donuts[2]"></donut-card>
     </div>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class DonutListComponent {
   donuts!: Donut[];
