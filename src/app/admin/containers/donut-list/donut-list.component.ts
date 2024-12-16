@@ -33,7 +33,8 @@ export class DonutListComponent {
         name: 'Glazed Fudge',
         icon: 'glazed-fudge',
         price: 299,
-        description: 'Sticky perfection'
+        description: 'Sticky perfection',
+        promo: true
       },
       {
         id: '927boaf',
