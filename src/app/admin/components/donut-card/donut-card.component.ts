@@ -18,6 +18,7 @@ import { Donut } from '../../models/donut.model';
       
       >
       <p class="donut-card-name">{{ donut.name }}</p>
+
       <p class="donut-card-price">{{ donut.price / 100 | currency: 'USD' : 'symbol'}}</p>  
     </div>
   `,
@@ -47,6 +48,14 @@ import { Donut } from '../../models/donut.model';
         }
         &-promo {
           border: 2px solid #eee;
+        }
+        &-label {
+          color: red;
+          border: 1px solid red;
+          border-radius: 5px;
+          background-color: lightpink;
+          padding: 2px 5px;
+          margin: 0 5px;
         }
       }
     `
